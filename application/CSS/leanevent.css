@@ -1,0 +1,621 @@
+/*
+  References:
+  1. https://datatables.net/examples/basic_init/alt_pagination.html
+  2. https://www.w3schools.com/html/
+  3. https://codepen.io/sahil4test/pen/xERYvX
+  4. https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_shapes_rectangle
+  
+  5.http://www.corelangs.com/css/box/ontop.html
+  
+  Blog References:
+  https://trust.guidestar.org/blog/2014/03/25/challenges-and-benefits-of-nonprofit-event-fundraising/
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1395800/
+
+http://www.seattleglobalist.com/2014/12/03/drug-recycling-prescription-meds-legal-syria-africa/31025
+
+https://hlca.co.uk/news/advantages-disadvantages-charity/
+
+1. http://codewithawa.com/posts/how-to-send-email-in-php
+2. https://www.123formbuilder.com/web-form-validation-script/
+3. https://www.cloudways.com/blog/custom-php-mysql-contact-form/
+4. https://alvinalexander.com/php/php-date-formatted-sql-timestamp-insert
+5. https://www.tutorialspoint.com/php/php_mysql_login.htm
+6. https://www.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/ch04s14.html
+7. https://bavotasan.com/2009/processing-multiple-forms-on-one-page-with-php/
+8. https://www.quora.com/How-do-you-access-the-session-variable-from-another-page-with-PHP
+9. https://1bestcsharp.blogspot.com/2015/10/php-mysql-populate-html-table-database-code.html
+10. https://stackoverflow.com/questions/20556773/php-display-image-blob-from-mysql
+11. https://stackoverflow.com/questions/43853908/creating-input-field-from-html-table-that-has-php-value
+12. https://stackoverflow.com/questions/19975624/retrieving-post-values-from-form-with-dynamic-element-names
+
+https://stackoverflow.com/questions/11581636/fatal-error-call-to-undefined-function-base-url-in-c-wamp-www-test-ci-applic
+https://www.tutorialspoint.com/codeigniter/codeigniter_sending_email.htm
+https://stackoverflow.com/questions/18586801/send-email-by-using-codeigniter-library-via-localhost
+https://expressionengine.com/forums/archive/topic/132443/sending-email-with-gmail-smtp-with-codeigniter-email-library
+https://www.codeigniter.com/user_guide/helpers/date_helper.html#gmt_to_local
+https://www.w3school.info/2016/03/25/custom-form-validation-in-codeigniter/
+https://www.kodingmadesimple.com/2016/08/codeigniter-display-query-result-in-view.html
+https://www.patchesoft.com/using-datatables-with-codeigniter-tutorial
+https://codeigniter.com/user_guide/general/views.html?highlight=data%20view
+https://www.c-sharpcorner.com/UploadFile/225740/fetch-data-from-database-and-show-in-tabular-format-in-codei/
+https://forum.codeigniter.com/archive/index.php?thread-14339.html
+https://www.sitepoint.com/community/t/how-to-count-the-number-of-times-a-button-is-clicked/27287/3
+https://stackoverflow.com/questions/39716817/how-to-add-icon-class-in-php-form-submit-of-codeigniter
+https://stackoverflow.com/questions/29551391/using-value-of-an-element-vs-innerhtml
+https://www.codeigniter.com/user_guide/libraries/sessions.html
+https://www.codeigniter.com/userguide3/database/query_builder.html
+
+
+*/
+
+ ul {
+  list-style-type: none;
+  width: 80%;
+  margin: 0;
+  padding-left: 100px;
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+li {
+  float: right;
+  padding: 10px;
+}
+
+li a {
+  color: #595959;
+  text-align: left;
+  text-decoration: none;
+}
+
+.selected
+{
+	color: #FFC300;
+}
+
+#logo
+{
+	position: relative;
+	height=25px; 
+	width=25px; 
+}
+
+#minibaner2
+{
+	position: absolute;
+	left: 80px;
+	top: 90px;
+	width:90%;
+	height: 500px;
+    clip: rect(0px,1500px,490px,0px);
+
+}
+
+#content
+{
+	position: absolute;
+	text-align: center;
+	width: 700px;
+	top: 650px;
+	left: 400px;
+	
+}
+
+#bannercontacto {
+	position: absolute;
+	left: 80px;
+	bottom: 360px;
+	width:90%;
+	height: 400px;
+    clip: rect(110px,1500px,300px,0px);
+
+}
+
+#ImageTextContacto
+{
+	position: absolute;
+	left: 735px;
+	top:160px;
+	font-weight: bold;	
+
+}
+
+#SubTextInicio
+{
+	position: absolute;
+	left: 735px;
+	top:185px;
+	font-size: 60%;
+}
+
+
+
+.column {
+  float: left;
+  width: 13%;
+  padding: 15px;
+  font-size: 90%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 10px;
+}
+
+.ColumnInfo {
+	position: absolute;
+	left: 375px;
+	top:400px;
+	text-align: left;
+	width: 90%;
+}
+
+#sociallogo {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	padding-left: 50px;
+}
+
+#socialname {
+	position: absolute;
+	padding-top: 25px;
+	color: #FFC300;
+  font-size: 13px;
+
+}
+
+.container {
+ /* position: absolute;
+  left: 360px;
+  top: 635px;*/
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  margin-top: 50px;
+  width:800px;
+  padding: 20px;
+  /*height: 450px;*/
+  }
+
+ input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-size: 12px;
+  
+}
+
+label {
+  font-size: 13px;
+}
+
+input[type=submit] {
+/*  position: absolute;
+  left: 350px;
+  top: 425px;*/
+  background-color: #FFC300;
+  color: white;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 300px;
+}
+
+input[type=button] {
+background-color: #FFC300;
+  color: white;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 300px;
+
+
+  }
+
+
+
+.socialbelow{
+  position: absolute;
+  left: 43%;
+  top: 170%;
+}
+
+#socialbelowlogo {
+	padding-left: 70px;
+	color: #FFC300;
+}
+
+#wrapper{ 
+    font-family: Roboto, Arial, sans-serif;
+    box-sizing: border-box;
+    min-width:auto;
+	max-width:auto; 
+	margin-left:auto;
+	margin-right:auto;
+	width: 80%;
+	text-align: center;
+	margin: auto;
+}
+
+#Copyright {
+	position: absolute;
+    left: 565px;
+    top: 1400px;
+}
+
+.arrwbtn {
+	background-color: #FFC300;
+ /* Green */
+
+    border: none;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left:900px;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.bannerpic {
+	position: absolute;
+	left: 80px;
+	bottom: 360px;
+	width:90%;
+	height: 400px;
+    clip: rect(110px,1500px,300px,0px);
+}
+
+#SubTextLogin
+{
+	position: absolute;
+	left: 742px;
+	top:185px;
+	font-size: 60%;
+}
+
+.columnAU {
+    width: 30%;
+    font-size: 70%;
+    float: left;
+    padding-left: 15px;
+    margin-right: 50px;
+}
+
+.olAU,ol {
+
+float: none;
+padding: 10px;
+}
+
+ol li {
+padding: 0px 0px 2px 0px;
+float: none;
+}
+
+.paratext {
+	text-align: justify;
+	font-size: 90%;
+}
+
+.rectangle {
+  background-color: #FFC300;
+  position: absolute;
+  left: 80px;
+  top: 1075px;
+  width:90%;
+  height: 100px;
+  
+  }
+
+  
+
+  div.rectangle input[type=text] {
+  padding: 10px;
+  font-size: 10px;
+  border: 1px solid grey;
+  float: left;
+  width: 13%;
+
+  background: #f1f1f1;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-top: 30px;
+}
+
+div.rectangle button{
+  float: left;
+  width: 5%;
+  padding: 10px;
+  background: black;
+  color: white;
+  font-size: 10px;
+  border: 1px solid grey;
+  margin-top: 30px;
+  cursor: pointer;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding-bottom: 10px;
+}
+
+.hr-text {
+
+width: 5%;
+display: inline-block;
+
+size: 2px;
+}
+
+.columnimage{
+	width:19%;
+	 float: left;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  height: 1500px;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 0px;
+  width: 35%;
+  position: relative;
+
+}
+
+.eventtable {
+  position: absolute;
+  top: 140px;
+  left: 40px;
+}
+
+.eventtablestyle{
+  width:1350px;
+  height: 150px;
+  text-align: center;
+  border: 1px solid #F0F0F0;
+  border-collapse: collapse;
+  border-left: 0px;
+  border-right: 0px;
+
+}
+
+.eventimage {
+  float: left;
+  width: 60px;
+  height: 70px;
+}
+
+.colhead {
+  background-color: #F0F0F0;
+}
+
+th {
+  padding: 10px;
+  font-size: 70%;
+}
+
+td {
+  font-size: 70%;
+  padding: 10px;
+}
+
+tr {
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.modifyButton
+{
+  background-color:#FFC133; 
+  border-radius: 15px; 
+  border:0px; 
+  height: 35px;
+   width: 50px;
+}
+
+.deleteBtn
+{
+  background-color:red; 
+  border-radius: 15px; 
+  border:0px; 
+  height: 35px;
+   width: 50px;
+}
+
+
+.pagination {
+  position: absolute;
+  left: 525px;
+  top: 575px;
+  
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+
+.pagination a.active {
+  background-color: #FFC300;
+  color: white;
+}
+
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.nota{
+  background-color: #FFC133;
+  border:1px solid #FFC133;
+  width: 5%;
+  border-radius: 15px;
+  padding: 3px;
+  padding-left: 8px;
+  font-size: 90%;
+  margin-top: 0px;
+  color:white;
+
+}
+
+input[type=radio] {
+margin-left: 20px;
+margin-bottom: 20px;
+}
+
+section.main
+    {  
+     
+
+     border:solid 1px #f0f0f0; 
+        width:200px;
+        overflow:hidden;
+        padding:0;
+    }
+section{
+    
+    
+    overflow:hidden;
+        height:200px;
+
+            
+        border:solid 1px #F0F0F0; 
+
+
+  }
+
+  qty {
+    width: 10px;
+    height: 15px;
+    padding: 0px;
+    margin:0px;
+}
+input.qtyplus { width:25px; height:25px;
+padding: 0px;
+margin:0px;
+background-color: #B0B0B0;}
+input.qtyminus { width:25px; height:25px;
+padding: 0px;
+margin:0px;
+background-color: #B0B0B0;}
+
+.shopcartbtn {
+
+  background-color: #FFC300;
+  color: white;
+  padding: 9px 20px;
+  border: none;
+  margin: 20px 0px 20px 0px;
+  cursor: pointer;
+  text-align: center;
+  
+}
+
+.bannerabout1{
+  position: absolute;
+  width:90%; 
+  height:400px;
+  left:80px;
+  
+  clip: rect(283px,1538px,394px,0px)
+}
+.bannerabout2{
+  position: absolute;
+  width:90%; 
+  height:400px;
+  left:80px;
+  
+  clip: rect(0px,1538px,72px,0px)
+}
+
+.sponsorlist{
+  position: absolute;
+  top:170%;
+  left:5%;
+
+  height: 13%;
+  width: 66%;
+  padding-left: 22%;
+  padding-top: 10px;
+  }
+  .homelogo{
+    width:45%;
+    height: 45%;
+  }
+  section .sponsorl1{
+    border:solid 0px #f0f0f0; 
+        width:100%;
+        overflow:hidden;
+        padding:0;
+  }
+  .pnav{
+    position: absolute;
+    top:120%;
+    left:50%;
+  }
+
+  #email_validation, #fname_validation,#lname_validation {
+    display:none;
+}
+
+.phpvalid{
+  display: block;
+  color: #FF0000;
+ }
+
+ div.rectangle .submit{
+  float: left;
+  width: 7%;
+  margin: 0px;
+  padding: 12px;
+  background: black;
+  color: white;
+  font-size: 75%;
+  border: 1px solid black;
+  margin-top: 20px;
+  border-radius: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  
+  cursor: pointer;
+  padding-bottom: 12px;
+}
